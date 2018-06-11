@@ -1,0 +1,2 @@
+# xiongzhang_tuisong_gui
+python编写的百度熊掌号资源提交工具GUI,url一行一个，需单独填appid和token
