@@ -15,8 +15,8 @@ def xiongzhang(event):
     post_url="http://data.zz.baidu.com/urls?appid=%s&token=%s&type=%s"%(appid,token,type)  #接口调用地址 熊掌号-资讯提交页面获取
     # filecontents={'file':open('urls.txt','r')}  #如果把所有urls放到本地的urls.txt里每行一个，则用这种方法来推送
     # r=requests.post(post_url,files=filecontents)
-    if requests.post(post_url,data=tuisong_urls):  #开始推送
-        r=requests.post(post_url,data=tuisong_urls)
+    r=requests.post(post_url,data=tuisong_urls)  #开始推送
+    if r:
         result=r.text.decode('utf8')
         # print result
         if 'success' in result:
